@@ -1,0 +1,198 @@
+/* =========================================
+   1. VARIABLES DE DISEÑO (Cozy Palette)
+   ========================================= */
+:root {
+  --bg-outer: #F3E5DE;       /* Fondo exterior suave */
+  --bg-canvas: #FFF6F1;      /* Fondo principal crema cálido */
+  --sidebar-pink: #F6C8C4;   /* Barra lateral rosa nube */
+  --ink-brown: #4A352F;      /* Texto e iconos marrón cacao */
+  --ink-soft: #7A5C53;       /* Marrón secundario */
+  --accent-honey: #E6B85C;   /* Acento dorado suave */
+  --border-soft: rgba(74, 53, 47, 0.12);
+
+  --font-display: 'Fredoka', sans-serif;
+  --font-body: 'Quicksand', sans-serif;
+
+  --radius-shell: 32px;
+  --radius-tab: 22px;
+  --sidebar-width: 136px;
+  --radius-shell: 28px;
+  --radius-tab: 18px;
+  --sidebar-width: 118px; /* Un poco más equilibrada respecto al alto */
+}
+
+/* =========================================
+   2. RESET Y BASE
+   ========================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100dvh;
+  background-color: var(--bg-outer);
+  font-family: var(--font-body);
+  color: var(--ink-brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+}
+
+/* =========================================
+   3. CONTENEDOR PRINCIPAL DEL DASHBOARD
+   ========================================= */
+.dashboard-shell {
+  width: 100%;
+  max-width: 75%;
+  height: 100%;
+  background-color: var(--bg-canvas);
+  border-radius: var(--radius-shell);
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(74, 53, 47, 0.08);
+  border: 2px solid var(--border-soft);
+}
+
+/* =========================================
+   4. BARRA LATERAL (SIDEBAR)
+   ========================================= */
+.sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  background-color: var(--sidebar-pink);
+  padding: 28px 0 28px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.profile-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding-right: 16px;
+  text-align: center;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--bg-canvas);
+  border: 2px solid var(--ink-brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.profile-name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--ink-brown);
+}
+
+/* Navegación */
+.nav-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.nav-item {
+  width: 100%;
+  padding: 14px 16px 14px 12px;
+  border: none;
+  background: transparent;
+  color: var(--ink-brown);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.78rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  border-radius: var(--radius-tab) 0 0 var(--radius-tab);
+  transition: background-color 0.2s ease;
+}
+
+.nav-item:hover:not(.active) {
+  background-color: rgba(255, 246, 241, 0.45);
+}
+
+.nav-item.active {
+  background-color: var(--bg-canvas);
+  box-shadow: -4px 4px 12px rgba(74, 53, 47, 0.05);
+}
+
+.nav-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+/* =========================================
+   LIENZO DERECHO Y CAJAS DE PRUEBA
+   ========================================= */
+.main-canvas {
+  flex: 1;
+  padding: 28px 32px;
+  background-color: var(--bg-canvas);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-box {
+  height: 100%;
+  border-radius: 22px;
+  padding: 28px;
+  border: 2px dashed rgba(74, 53, 47, 0.16);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--ink-brown);
+}
+
+.section-desc {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+/* Variantes suaves por sección */
+.box-inicio {
+  background-color: #fde8d6; /* Durazno pastel */
+}
+
+.box-proyectos {
+  background-color: #f4d9d6; /* Rosa empolvado suave */
+}
+
+.box-stack {
+  background-color: #e3ece5; /* Verde salvia pastel */
+}
+
+.box-personal {
+  background-color: #fff5e5; /* Crema miel / dorado suave */
+}
+
+.box-contacto {
+  background-color: #f0e9f4; /* Lila pastel muy suave */
+}
+
+
