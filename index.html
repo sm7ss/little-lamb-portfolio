@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sharon Minutti | Data & Analytics Engineer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tu hoja de estilos -->
+  <link rel="stylesheet" href="css/inicio.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="dashboard-shell">
+    <!-- Barra lateral de navegación -->
+    <aside class="sidebar">
+      <div class="profile-box">
+        <div class="avatar" aria-hidden="true">🐑</div>
+        <span class="profile-name">Sharon</span>
+      </div>
+
+      <nav class="nav-list" aria-label="Navegación principal">
+        <button class="nav-item active" type="button" data-section="inicio">
+          <span class="nav-icon" aria-hidden="true">🏠</span>
+          <span>Inicio</span>
+        </button>
+
+        <button class="nav-item" type="button" data-section="proyectos">
+          <span class="nav-icon" aria-hidden="true">📊</span>
+          <span>Proyectos</span>
+        </button>
+
+        <button class="nav-item" type="button" data-section="stack">
+          <span class="nav-icon" aria-hidden="true">🛠️</span>
+          <span>Stack</span>
+        </button>
+
+        <button class="nav-item" type="button" data-section="personal">
+          <span class="nav-icon" aria-hidden="true">🎀</span>
+          <span>Personal</span>
+        </button>
+
+        <button class="nav-item" type="button" data-section="contacto">
+          <span class="nav-icon" aria-hidden="true">✉️</span>
+          <span>Contacto</span>
+        </button>
+      </nav>
+    </aside>
+
+    <!-- Lienzo derecho reservado para las siguientes secciones -->
+    <main class="main-canvas" id="main-canvas"></main>
+  </div>
+<script src="js/app.js"></script>
+</body>
+</html>
